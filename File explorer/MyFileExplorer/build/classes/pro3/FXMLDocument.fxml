@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pro3.FXMLDocumentController">
+   <children>
+      <SplitPane fx:id="slpPane" dividerPositions="0.29797979797979796" layoutY="-4.0" prefHeight="594.0" prefWidth="621.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TreeView fx:id="myTreeView" layoutX="1.0" layoutY="1.0" onMouseClicked="#mouseClick" prefHeight="594.0" prefWidth="181.0">
+                     <effect>
+                        <InnerShadow color="#050e46" height="23.97" radius="5.4925" width="0.0" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding></TreeView>
+               </children>
+               <padding>
+                  <Insets bottom="50.0" left="4.0" right="4.0" top="50.0" />
+               </padding>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="585.0" prefWidth="432.0">
+               <children>
+                  <Button fx:id="tilesButton" layoutX="7.0" layoutY="557.0" mnemonicParsing="false" onAction="#handleButtonTilesViewAction" prefHeight="25.0" prefWidth="221.0" text="Tiles View">
+                     <effect>
+                        <InnerShadow color="#320505" />
+                     </effect></Button>
+                  <Button fx:id="backButton" layoutX="325.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleButtonBackAction" prefHeight="25.0" prefWidth="45.0" text="&lt;" textFill="#0a4459">
+                     <effect>
+                        <InnerShadow choke="0.26" height="5.25" radius="6.0025" width="20.76" />
+                     </effect></Button>
+                  <ScrollPane fx:id="myscrollPane" layoutY="58.0" prefHeight="499.0" prefWidth="432.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="430.0">
+                           <children>
+                              <TilePane fx:id="myTilePane" prefHeight="485.0" prefRows="0" prefWidth="432.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ScrollBar orientation="VERTICAL" prefHeight="485.0" prefWidth="14.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="12.0" />
+                                 </padding>
+                              </TilePane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <Button fx:id="dButton" layoutX="228.0" layoutY="557.0" mnemonicParsing="false" onAction="#handleButtonDetailsViewAction" prefHeight="25.0" prefWidth="193.0" text="Details View">
+                     <effect>
+                        <InnerShadow color="#4d3535" />
+                     </effect></Button>
+                  <TextField fx:id="myTextField" layoutY="19.0" prefHeight="25.0" prefWidth="322.0" promptText="currentAddress">
+                     <effect>
+                        <DropShadow color="#070000" height="17.79" radius="8.395" spread="0.42" width="17.79" />
+                     </effect></TextField>
+                  <TableView fx:id="myTable" layoutY="61.0" onMouseClicked="#onRowClick" prefHeight="491.0" prefWidth="432.0">
+                    <columns>
+                      <TableColumn fx:id="str" prefWidth="75.0" text="Icon" />
+                      <TableColumn fx:id="str2" prefWidth="107.0" text="Name" />
+                        <TableColumn fx:id="str3" prefWidth="122.0" text="Size" />
+                        <TableColumn fx:id="str4" minWidth="0.0" prefWidth="119.0" text="Date" />
+                    </columns>
+                     <effect>
+                        <InnerShadow choke="0.09" color="#000911" height="22.24" radius="10.25" width="20.76" />
+                     </effect>
+                  </TableView>
+                  <Button fx:id="forwardButton" layoutX="370.0" layoutY="19.0" mnemonicParsing="false" onAction="#setForwardAction" prefHeight="25.0" prefWidth="45.0" text="&gt;">
+                     <effect>
+                        <InnerShadow color="#110000" height="10.5" radius="7.3125" width="20.75" />
+                     </effect>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow color="#834f3e" height="8.9" radius="18.035" spread="0.51" width="65.24" />
+               </effect>
+            </AnchorPane>
+        </items>
+         <effect>
+            <InnerShadow choke="0.16" height="50.65" radius="21.119999999999997" width="35.83" />
+         </effect>
+      </SplitPane>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>
